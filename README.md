@@ -11,11 +11,11 @@ Fehim KÖYLÜ
 
 ## Home Page
 <p align="center">
-   <img src="[https://github.com/YELBEGEN7/YELBEGEN7/assets/64197926/d0f9eff5-e03f-487d-8eb3-9da28d905e97]" />
+   <img src="https://github.com/YELBEGEN7/YELBEGEN7/assets/64197926/d0f9eff5-e03f-487d-8eb3-9da28d905e97" />
 </p>
 Small screenshot of the Home Page.
 <p align="center">
-   <img src="[[https://github.com/YELBEGEN7/YELBEGEN7/assets/64197926/d0f9eff5-e03f-487d-8eb3-9da28d905e97]]"/>
+   <img src="[https://github.com/YELBEGEN7/mobile_applications_final/assets/64197926/f85e2a47-3b5c-4ffd-a6f9-054640f259e5]"/>
 </p>
 Large screenshot of the Home Page.
 
