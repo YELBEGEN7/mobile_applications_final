@@ -3,6 +3,7 @@ import 'package:mobile_applications_final/customwidgets/CustomCard.dart';
 import 'package:mobile_applications_final/models/foodsmodel.dart';
 import 'package:mobile_applications_final/services/foodservice.dart';
 
+//Yemekleri gösteren sayfaya ait class
 class Foods extends StatefulWidget {
   final String id;
   const Foods({super.key, required this.id});
@@ -20,7 +21,7 @@ class _FoodsState extends State<Foods> {
     _foods = _getFoodsData();
   }
 
-  Future<List<FoodsModel>> _getFoodsData() async {
+  Future<List<FoodsModel>> _getFoodsData() async {//verileri getiriyor
     return await FoodsService().getFoods(widget.id);
   }
 
@@ -46,7 +47,7 @@ class _FoodsState extends State<Foods> {
             ),
           ),
           Center(
-            child: FutureBuilder<List<FoodsModel>>(
+            child: FutureBuilder<List<FoodsModel>>(//verinin gelmesini beklemek için bir bekleme ve loading süreci sağlar
               future: _foods,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {

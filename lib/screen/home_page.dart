@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_applications_final/screen/categories.dart';
 import '../customwidgets/CustomCard.dart';
 
+//AnaSayfayı tanımlayan class
 class HomePage extends StatelessWidget {
   const HomePage({
     super.key,
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
         children: [
           Container(
             decoration: const BoxDecoration(
-              image: DecorationImage(
+              image: DecorationImage(//arkaplan dosyası ekleme
                 image: AssetImage("assets/image/arkaplan.jpg"),
                 fit: BoxFit.cover,
               ),
@@ -37,7 +38,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Hero(
                     tag: 'profile_picture',
-                    child: Image.asset(
+                    child: Image.asset(//Hero animasyonu ile bir resim ekleme
                       "assets/image/profil.png",
                       width: 200,
                       height: 400,
@@ -57,7 +58,7 @@ class HomePage extends StatelessWidget {
                       padding: EdgeInsets.zero,
                       overlayColor: const Color.fromARGB(255, 76, 5, 0),
                     ),
-                    child: const CustomCard(
+                    child: const CustomCard(//Benim oluşturduğum özelleştirilmiş container
                       text: 'Food Categories',
                       fontsize: 18,
                       colori: Colors.red,

@@ -3,6 +3,7 @@ import 'package:mobile_applications_final/models/categorymealmodel.dart';
 import 'package:mobile_applications_final/screen/foods.dart';
 import 'package:mobile_applications_final/services/catagorymealservice.dart';
 
+//Yemek Listesi classı
 class CategoryMeal extends StatefulWidget {
   final String name;
   const CategoryMeal({super.key, required this.name});
@@ -20,7 +21,7 @@ class _CategoryMealState extends State<CategoryMeal> {
     _categorymealFuture = _getcategorymeal();
   }
 
-  Future<List<Categorymealmodel>> _getcategorymeal() async {
+  Future<List<Categorymealmodel>> _getcategorymeal() async {//veriyi çeker
     return await CategoryMealService().getCategorymeal(widget.name);
   }
 
@@ -33,7 +34,7 @@ class _CategoryMealState extends State<CategoryMeal> {
         backgroundColor: Colors.red,
       ),
       body: Center(
-        child: FutureBuilder<List<Categorymealmodel>>(
+        child: FutureBuilder<List<Categorymealmodel>>(//verinin gelmesini beklemek için bir bekleme ve loading süreci sağlar
           future: _categorymealFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {

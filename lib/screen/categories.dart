@@ -4,6 +4,7 @@ import 'package:mobile_applications_final/models/categorymodel.dart';
 import 'package:mobile_applications_final/screen/categorymeal.dart';
 import 'package:mobile_applications_final/services/categoryservices.dart';
 
+//kategori classı
 class CategoriesFoods extends StatefulWidget {
   const CategoriesFoods({super.key});
 
@@ -21,7 +22,7 @@ class _CategoriesFoodState extends State<CategoriesFoods> {
   }
 
   Future<List<CategoryModel>> _getCategoryData() async {
-    return await CategoryService().getCategories();
+    return await CategoryService().getCategories();//veri çeker
   }
 
   @override
@@ -33,7 +34,7 @@ class _CategoriesFoodState extends State<CategoriesFoods> {
         backgroundColor: Colors.red,
       ),
       body: Center(
-        child: FutureBuilder<List<CategoryModel>>(
+        child: FutureBuilder<List<CategoryModel>>(//verinin gelmesini beklemek için bir bekleme ve loading süreci sağlar
           future: _categories,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
