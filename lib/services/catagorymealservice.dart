@@ -11,7 +11,6 @@ class CategoryMealService {
       if (response.statusCode != 200) {
         return Future.error('A problem has occurred');
       } else {
-        print(url);
         final List data = response.data['meals'];
         final List<Categorymealmodel> categorymeal =
             data.map((e) => Categorymealmodel.fromJson(e)).toList();

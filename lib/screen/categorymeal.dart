@@ -27,7 +27,9 @@ class _CategoryMealState extends State<CategoryMeal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.name),
+        title: Text(widget.name,style:const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),),
+        centerTitle: true,
+        backgroundColor: Colors.red,
       ),
       body: Center(
         child: FutureBuilder<List<Categorymealmodel>>(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_applications_final/screen/categories.dart';
-import 'package:mobile_applications_final/screen/screen2.dart';
 import '../customwidgets/CustomCard.dart';
 
 class HomePage extends StatelessWidget {
@@ -38,10 +37,19 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Center(
-                  child: Row(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      Hero(
+                        tag:'tag',
+                        child: Image.asset(
+                          "assets/image/profil.png",
+                          width: 200,
+                          height: 400,
+                          fit: BoxFit.contain,
+                        ),//Image.asset
+                      ), 
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
@@ -61,34 +69,7 @@ class HomePage extends StatelessWidget {
                           shadowi: Colors.redAccent,
                         ),
                       ),
-                      Hero(
-                        tag:'tag',
-                        child: Image.asset(
-                          "assets/image/profil.png",
-                          width: 200,
-                          height: 400,
-                          fit: BoxFit.contain,
-                        ),
-                      ), //Image.asset
-
-                      ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const ListFramework1(),
-                                ));
-                          },
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.zero,
-                            overlayColor: const Color.fromARGB(255, 76, 5, 0),
-                          ),
-                          child: const CustomCard(
-                            text: 'Screen 2 Geçiş',
-                            fontsize: 18,
-                            colori: Colors.red,
-                            shadowi: Colors.redAccent,
-                          )),
+                      const SizedBox(width: 0,height: 10,),
                     ],
                   ),
                 ),
@@ -98,6 +79,7 @@ class HomePage extends StatelessWidget {
                   colori: Colors.amber,
                   shadowi: Colors.amberAccent,
                 ),
+                const SizedBox(width: 0,height: 10,),
                 const Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -109,41 +91,39 @@ class HomePage extends StatelessWidget {
                         colori: Colors.amber,
                         shadowi: Colors.amberAccent,
                       ),
+                      SizedBox(width: 10,height: 0,),
                       CustomCard(
                         text: 'Student No: 1030520914',
                         fontsize: 16,
                         colori: Colors.amber,
                         shadowi: Colors.amberAccent,
-                      )
-                    ],
-                  ),
-                ),
-                const Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
+                      ),
+                      SizedBox(width: 10,height: 0,),
                       CustomCard(
                         text: 'Univercity: Erciyes Univercity',
                         fontsize: 16,
                         colori: Colors.amber,
                         shadowi: Colors.amberAccent,
                       ),
+                      SizedBox(width: 10,height: 0,),
                       CustomCard(
                         text: 'Course: Mobile Application',
                         fontsize: 16,
                         colori: Colors.amber,
                         shadowi: Colors.amberAccent,
-                      )
-                    ],
-                  ),
-                ),
-                const CustomCard(
+                      ),
+                      SizedBox(width: 10,height: 0,),
+                CustomCard(
                   text: 'Teacher: Fehim Köylü',
                   fontsize: 18,
                   colori: Colors.amber,
                   shadowi: Colors.amberAccent,
                 )
+                    ],
+                  ),
+                ),
+  
+
               ],
             ), //Column
           ), //Center

@@ -28,7 +28,9 @@ class _CategoriesFoodState extends State<CategoriesFoods> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Category'),
+        title: const Text('Category',style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),),
+        centerTitle: true,
+        backgroundColor: Colors.red,
       ),
       body: Center(
         child: FutureBuilder<List<CategoryModel>>(
