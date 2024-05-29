@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_applications_final/models/categorymealmodel.dart';
+import 'package:mobile_applications_final/screen/foods.dart';
 import 'package:mobile_applications_final/services/catagorymealservice.dart';
 
 class CategoryMeal extends StatefulWidget {
@@ -49,7 +50,9 @@ class _CategoryMealState extends State<CategoryMeal> {
                 itemBuilder: (context, index) {
                   final Categorymealmodel categoriesmeal = _categorymeal[index];
                   return ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder:(context)=>Foods(id:categoriesmeal.id)));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.all(20),
                       shape: const RoundedRectangleBorder(),

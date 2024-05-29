@@ -4,7 +4,7 @@ import 'package:mobile_applications_final/models/foodsmodel.dart';
 
 class FoodsService{
   Future <List<FoodsModel>> getFoods(String id) async{
-    String url = 'www.themealdb.com/api/json/v1/1/lookup.php?i=$id';
+    String url = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=$id';
     final dio = Dio();
     try {
       final response = await dio.get(url);
