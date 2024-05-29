@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_applications_final/screen/categories.dart';
 import 'package:mobile_applications_final/screen/screen2.dart';
-
-import '../custom_card.dart';
+import '../customwidgets/CustomCard.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -43,32 +43,37 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const ListFramework1(),
-                                ));
-                          },
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.zero,
-                          ),
-                          child: const CustomCard(
-                            text: 'Screen 2 Geçiş',
-                            fontsize: 18,
-                            colori: Colors.red,
-                            shadowi: Colors.redAccent,
-                          )),
-                      Image.asset(
-                        "assets/image/profil.png",
-                        width: 200,
-                        height: 400,
-                        fit: BoxFit.contain,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const CategoriesFoods(),
+                              ));
+                        },
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          overlayColor: const Color.fromARGB(255, 76, 5, 0),
+                        ),
+                        child: const CustomCard(
+                          text: 'Food Categories',
+                          fontsize: 18,
+                          colori: Colors.red,
+                          shadowi: Colors.redAccent,
+                        ),
+                      ),
+                      Hero(
+                        tag:'tag',
+                        child: Image.asset(
+                          "assets/image/profil.png",
+                          width: 200,
+                          height: 400,
+                          fit: BoxFit.contain,
+                        ),
                       ), //Image.asset
 
                       ElevatedButton(
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => const ListFramework1(),
@@ -76,6 +81,7 @@ class HomePage extends StatelessWidget {
                           },
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.zero,
+                            overlayColor: const Color.fromARGB(255, 76, 5, 0),
                           ),
                           child: const CustomCard(
                             text: 'Screen 2 Geçiş',
